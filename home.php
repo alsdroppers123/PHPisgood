@@ -11,7 +11,7 @@
     margin: 0px;
     box-sizing: border-box;
     
-}
+    }
 
 @font-face {
     font-family: marvel;
@@ -138,7 +138,50 @@ header nav .button button:hover {
     border: 3px solid #fff;
 
 }
+header .button {
+    /* border: 2px solid #fff; */
+    position: realative;
+ 
 
+}
+
+
+
+header .button img{
+    height: 30px;
+    width: 30px;
+    margin-right: 40px;
+}
+
+header .button img:hover {
+    
+    -webkit-transform: rotate(360deg);
+    -webkit-transition-duration: 1s;
+}
+
+header .button .box {
+    border:3px solid #993230;
+    background-color: #447bbe;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    visibility: hidden;
+    position: absolute;
+    margin-top: 150px;
+    transition: all .3s ease-in-out;
+
+}
+
+
+
+
+header .button .box button{
+    margin-left: 30px;
+    margin-top: 10px;
+}
 section {
 
     width: 90%;
@@ -580,7 +623,13 @@ main .follow h1{
                 <li><a href="#">Help</a></li>
             </ul>
             <div class="button">
-               <!-- <a href="login.html"><button>LOGIN</button></a> -->
+             <div class="gear"><img onclick="visible()" ondblclick="disable()" src="img/gear.png" alt=""></div>
+             
+                <div id="box" class="box">
+                 <button>Edit</button>
+                 <a href="delete.php"><button>Delete</button></a>
+                </div>
+            
             </div>
         </nav>
         <section>
@@ -596,7 +645,7 @@ main .follow h1{
                 </div>
 
                 <div class="pre">
-                    <button>PRE-ORDER</button>
+                    <button >PRE-ORDER</button>
                     <h2>Your Ticket Now</h2>
                 </div>
             </div>
@@ -651,6 +700,17 @@ main .follow h1{
         
         
     </header>
+    <script>
+                function visible(){
+                    const visdiv = document.getElementById("box");
+                    visdiv.style.visibility="visible";
+                }
+                function disable(){
+                    const visdiv = document.getElementById("box");
+                    visdiv.style.visibility="hidden";
+                }
+    </script>
+    
 </body>
 
 </html>
